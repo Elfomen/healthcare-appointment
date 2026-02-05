@@ -213,7 +213,7 @@ export function PatientForm({ onSubmit, onBack }: PatientFormProps) {
             name="phone"
             label="Phone Number"
             type="tel"
-            placeholder="(555) 123-4567"
+            placeholder="(237) 678 940 123"
             required
             icon={Phone}
           />
@@ -266,7 +266,7 @@ export function PatientForm({ onSubmit, onBack }: PatientFormProps) {
               handleChange={handleChange}
               name="address"
               label="Address"
-              placeholder="123 Main St, City, State 12345"
+              placeholder="Quarter, City, Region"
               icon={MapPin}
             />
           </div>
@@ -330,7 +330,7 @@ export function PatientForm({ onSubmit, onBack }: PatientFormProps) {
             name="emergencyPhone"
             label="Contact Phone"
             type="tel"
-            placeholder="(555) 987-6543"
+            placeholder="(237) 678-901 234"
             required
             icon={Phone}
           />
