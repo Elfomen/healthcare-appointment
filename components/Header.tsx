@@ -1,6 +1,6 @@
 "use client";
 
-import { Dispatch, SetStateAction, useState } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { Heart, Menu, X, Phone, User } from "lucide-react";
 import { ViewState } from "@/app/page";
@@ -14,13 +14,12 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <div className="flex items-center gap-2">
+          <Link href={appRoutes.homePage} className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
               <Heart className="w-6 h-6 text-primary-foreground" />
             </div>
             <span className="text-xl font-bold text-foreground">MediCare</span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
@@ -71,11 +70,11 @@ export function Header() {
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="tel:1-800-MEDICARE"
+              href="tel:9050-CAM-MEDICARE"
               className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
             >
               <Phone className="w-4 h-4" />
-              <span>1-800-MEDICARE</span>
+              <span>9050-CAM-MEDICARE</span>
             </a>
             <Button
               // href={"/appointments/booking"}

@@ -33,10 +33,12 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${plusJakarta.variable} font-sans antialiased`}
       >
-        <Header />
-        {children}
-        <BottomPage />
-        <Footer />
+        <div className="min-h-screen bg-background">
+          <Header />
+          {children}
+          <BottomPage />
+          <Footer />
+        </div>
       </body>
     </html>
   );

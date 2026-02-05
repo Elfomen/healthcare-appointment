@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { Star, Clock, Globe, CheckCircle } from "lucide-react";
 import type { Doctor } from "@/types/healthcare";
+import Image from "next/image";
 
 interface DoctorCardProps {
   doctor: Doctor;
@@ -24,13 +25,14 @@ export function DoctorCard({ doctor, selected, onSelect }: DoctorCardProps) {
     >
       <CardContent className="p-5">
         <div className="flex gap-4">
-          {/* Doctor Image */}
           <div className="relative flex-shrink-0">
-            <img
+            <Image
               src={doctor.image || "/placeholder.svg"}
               alt={doctor.name}
               className="w-20 h-20 rounded-xl object-cover"
               crossOrigin="anonymous"
+              width={20}
+              height={20}
             />
             {doctor.availableToday && (
               <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-secondary rounded-full flex items-center justify-center border-2 border-card">
@@ -39,7 +41,6 @@ export function DoctorCard({ doctor, selected, onSelect }: DoctorCardProps) {
             )}
           </div>
 
-          {/* Doctor Info */}
           <div className="flex-1 min-w-0">
             <div className="flex items-start justify-between gap-2">
               <div>
@@ -57,7 +58,6 @@ export function DoctorCard({ doctor, selected, onSelect }: DoctorCardProps) {
               )}
             </div>
 
-            {/* Rating */}
             <div className="flex items-center gap-2 mt-2">
               <div className="flex items-center gap-1">
                 <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
@@ -70,7 +70,6 @@ export function DoctorCard({ doctor, selected, onSelect }: DoctorCardProps) {
               </span>
             </div>
 
-            {/* Details */}
             <div className="flex flex-wrap items-center gap-3 mt-3 text-xs text-muted-foreground">
               <div className="flex items-center gap-1">
                 <Clock className="w-3 h-3" />
@@ -84,7 +83,6 @@ export function DoctorCard({ doctor, selected, onSelect }: DoctorCardProps) {
           </div>
         </div>
 
-        {/* Availability & Price */}
         <div className="flex items-center justify-between mt-4 pt-4 border-t border-border">
           <div>
             <p className="text-xs text-muted-foreground">Next available</p>

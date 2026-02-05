@@ -14,7 +14,7 @@ export type ViewState =
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
+    <div>
       <main>
         <HeroSection />
         {/* <ServicesSection onSelectService={handleSelectService} />  */}
