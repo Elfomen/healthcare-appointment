@@ -5,15 +5,11 @@ import { Button } from "@/components/ui/Button";
 import { Heart, Menu, X, Phone, User } from "lucide-react";
 import { ViewState } from "@/app/page";
 import Link from "next/link";
+import { appRoutes } from "@/lib/routes";
 
-interface HeaderProps {
-  currentView: ViewState;
-  setCurrentView: Dispatch<SetStateAction<ViewState>>;
-}
-
-export function Header({ currentView, setCurrentView }: HeaderProps) {
+export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  const [currentView, setCurrentView] = useState<ViewState>("home");
   return (
     <header className="sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -29,7 +25,7 @@ export function Header({ currentView, setCurrentView }: HeaderProps) {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <Link
-              href="/"
+              href={appRoutes.homePage}
               className={`text-sm font-medium transition-colors hover:text-red-300 ${
                 currentView === "home"
                   ? "text-primary"
@@ -39,7 +35,7 @@ export function Header({ currentView, setCurrentView }: HeaderProps) {
               Home
             </Link>
             <Link
-              href="/services"
+              href={appRoutes.services}
               onClick={() => setCurrentView("services")}
               className={`text-sm font-medium text-muted-foreground transition-colors hover:text-primary ${
                 currentView === "services"
@@ -50,7 +46,7 @@ export function Header({ currentView, setCurrentView }: HeaderProps) {
               Services
             </Link>
             <Link
-              href="/doctors"
+              href={appRoutes.doctors}
               onClick={() => setCurrentView("doctors")}
               className={`text-sm font-medium text-muted-foreground transition-colors hover:text-primary ${
                 currentView === "doctors"
@@ -61,7 +57,7 @@ export function Header({ currentView, setCurrentView }: HeaderProps) {
               Doctors
             </Link>
             <Link
-              href={"/appointments"}
+              href={appRoutes.appointments}
               className={`text-sm font-medium transition-colors hover:text-primary ${
                 currentView === "dashboard"
                   ? "text-primary"

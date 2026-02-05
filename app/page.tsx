@@ -1,6 +1,7 @@
 "use client";
 
-import { Header } from "@/components/healthcare/Header";
+import { HeroSection } from "@/components/HeroSection";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export type ViewState =
@@ -12,10 +13,12 @@ export type ViewState =
   | "appointments";
 
 export default function Home() {
-  const [currentView, setCurrentView] = useState<ViewState>("home");
   return (
     <div className="min-h-screen bg-background">
-      <Header currentView={currentView} setCurrentView={setCurrentView} />
+      <main>
+        <HeroSection />
+        {/* <ServicesSection onSelectService={handleSelectService} />  */}
+      </main>
     </div>
   );
 }

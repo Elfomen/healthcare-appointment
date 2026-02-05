@@ -14,6 +14,8 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { services } from "@/data/mockData";
+import { useRouter } from "next/navigation";
+import { appRoutes } from "@/lib/routes";
 
 interface ServicesSectionProps {
   onSelectService: (serviceId: string) => void;
@@ -28,7 +30,8 @@ const iconMap: Record<string, React.ElementType> = {
   skin: Activity,
 };
 
-export function ServicesSection({ onSelectService }: ServicesSectionProps) {
+function ServicesSection({ onSelectService }: ServicesSectionProps) {
+  const router = useRouter();
   return (
     <section id="services" className="py-20 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,7 +57,11 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
               <Card
                 key={service.id}
                 className="group cursor-pointer border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300"
-                onClick={() => onSelectService(service.id)}
+                onClick={() =>
+                  router.push(
+                    `${appRoutes.bookAppointment}?serviceId=${service.id}`,
+                  )
+                }
               >
                 <CardContent className="p-6">
                   <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
@@ -91,3 +98,5 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
     </section>
   );
 }
+
+export default ServicesSection;

@@ -1,8 +1,10 @@
 import React from "react";
 import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Header } from "@/components/Header";
 
 import "./globals.css";
+import FooterComponent from "@/components/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,7 +32,9 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${plusJakarta.variable} font-sans antialiased`}
       >
+        <Header />
         {children}
+        <FooterComponent />
       </body>
     </html>
   );
