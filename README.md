@@ -245,7 +245,7 @@ Contributions are welcome! Here's how to help:
 ## **🙋‍♂️ Support**
 
 - **Email**: fomenayann@gmail.com
-- **LinkedIn**: [Connect with me](www.linkedin.com/in/fomena-yannick-3524aa209)
+- **LinkedIn**: [Connect with me](https://www.linkedin.com/in/fomena-yannick-3524aa209)
 
 ## **🙏 Acknowledgments**
 
