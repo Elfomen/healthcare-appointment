@@ -4,7 +4,8 @@ import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import { Header } from "@/components/Header";
 
 import "./globals.css";
-import FooterComponent from "@/components/Footer";
+import BottomPage from "@/components/BottomPage";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -34,7 +35,8 @@ export default function RootLayout({
       >
         <Header />
         {children}
-        <FooterComponent />
+        <BottomPage />
+        <Footer />
       </body>
     </html>
   );
