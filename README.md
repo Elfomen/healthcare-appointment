@@ -272,7 +272,7 @@ Contributions are welcome! Here's how to help:
 
 ⭐ **Star this repo if you find it useful!**
 
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/medibook-frontend?style=social)](https://github.com/yourusername/medibook-frontend)
+[![GitHub stars](https://github.com/Elfomen/healthcare-appointment.git?style=social)](https://github.com/Elfomen/healthcare-appointment.git)
 
 **Happy coding! 👨‍💻**
 
