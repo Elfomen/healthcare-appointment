@@ -289,6 +289,7 @@ function BookingWizard() {
                   doctor={doctor}
                   selected={selectedDoctor?.id === doctor.id}
                   onSelect={handleDoctorSelect}
+                  onContinue={handleDoctorContinue}
                 />
               ))}
             </div>

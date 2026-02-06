@@ -1,14 +1,6 @@
-/* app/globals.css */
-
-/* 1. Import Tailwind CSS v4 */
 @import "tailwindcss";
 
-/* 2. Import the animate plugin (if available for v4) */
-/* Note: tailwindcss-animate might need v4 compatibility */
-
-/* 3. CSS Custom Properties (CSS Variables) */
 :root {
-  /* Your radius variables */
   --radius: 0.5rem;
 
   /* Color palette as HSL variables */
@@ -166,7 +158,6 @@
 @theme dark {
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
-  /* Add all dark mode overrides here */
 }
 
 /* 7. Keyframes */
@@ -203,8 +194,6 @@
   .dark .dark\:bg-background {
     background-color: hsl(var(--background));
   }
-
-  /* Add any other custom utilities from tailwindcss-animate */
 }
 
 /* 9. Base Styles */

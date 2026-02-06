@@ -11,9 +11,15 @@ interface DoctorCardProps {
   doctor: Doctor;
   selected?: boolean;
   onSelect: (doctor: Doctor) => void;
+  onContinue: () => void;
 }
 
-export function DoctorCard({ doctor, selected, onSelect }: DoctorCardProps) {
+export function DoctorCard({
+  doctor,
+  selected,
+  onSelect,
+  onContinue,
+}: DoctorCardProps) {
   return (
     <Card
       className={`cursor-pointer transition-all duration-300 hover:shadow-lg ${
@@ -103,7 +109,10 @@ export function DoctorCard({ doctor, selected, onSelect }: DoctorCardProps) {
         </div>
 
         {selected && (
-          <Button className="w-full mt-4 bg-primary hover:bg-primary/90 text-primary-foreground">
+          <Button
+            onClick={onContinue}
+            className="w-full mt-4 bg-primary hover:bg-primary/90 text-primary-foreground"
+          >
             Continue with {doctor.name.split(" ")[1]}
           </Button>
         )}

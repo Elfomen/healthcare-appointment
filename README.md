@@ -42,7 +42,7 @@ A modern, patient-focused medical appointment booking system frontend. Built wit
 ```bash
 # Clone the repository
 git clone https://github.com/Elfomen/healthcare-appointment.git
-cd healthcare-frontend
+cd healthcare-appointment
 
 # Install dependencies
 npm install
